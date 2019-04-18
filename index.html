@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>hidden</title>
+  </head>
+  <body>
+    <div class="container  text-center">
+      <img
+        class="head-image"
+        src="iconfinder_Technology_Mix_-_Final-29_998659.png"
+        alt=""
+      />
+      <!------------Form Encrypt----------->
+      <form class="form-group mt-5">
+        <input
+          id="msgInputEncrypt"
+          placeholder="Your Message..."
+          type="text"
+          class="form-control"
+        />
+        <button class="btn btn-danger mt-3" id="btnEncrypt">Encrypt Key</button>
+      </form>
+      <div id="displayEncryptCode"></div>
+    </div>
+    <div class="container text-center mt-5">
+      <!------------Form Decrypt----------->
+      <form class="form-group mt-2">
+        <input
+          id="msgInputDecrypt"
+          placeholder="Your Key..."
+          type="text"
+          class="form-control"
+        />
+        <button class="btn btn-primary mt-3" id="btnDecrypt">
+          Decrypt Key
+        </button>
+      </form>
+      <div id="displayDecryptCode"></div>
+    </div>
+    <!--------------SCript------------------>
+    <script>
+      //Encrypt Function
+      function codeEncrypt(e) {
+        e.preventDefault();
+
+        const msgEncrypt = document
+          .getElementById('msgInputEncrypt')
+          .value.toLowerCase();
+        const displayEncryptCode = document.getElementById(
+          'displayEncryptCode'
+        );
+        const encryptArr = msgEncrypt.split('');
+        for (let el of encryptArr) {
+          if (el == 'a') {
+            el = 26;
+          }
+          if (el == 'b') {
+            el = 25;
+          }
+          if (el == 'c') {
+            el = 22;
+          }
+          if (el == 'd') {
+            el = 21;
+          }
+          if (el == 'e') {
+            el = 24;
+          }
+          if (el == 'f') {
+            el = 23;
+          }
+          if (el == 'g') {
+            el = 20;
+          }
+          if (el == 'h') {
+            el = 19;
+          }
+          if (el == 'i') {
+            el = 16;
+          }
+          if (el == 'j') {
+            el = 15;
+          }
+          if (el == 'k') {
+            el = 18;
+          }
+          if (el == 'l') {
+            el = 17;
+          }
+          if (el == 'm') {
+            el = 14;
+          }
+          if (el == 'n') {
+            el = 13;
+          }
+          if (el == 'o') {
+            el = 10;
+          }
+          if (el == 'p') {
+            el = 9;
+          }
+          if (el == 'q') {
+            el = 12;
+          }
+          if (el == 'r') {
+            el = 11;
+          }
+          if (el == 's') {
+            el = 8;
+          }
+          if (el == 't') {
+            el = 7;
+          }
+          if (el == 'u') {
+            el = 4;
+          }
+          if (el == 'v') {
+            el = 3;
+          }
+          if (el == 'w') {
+            el = 6;
+          }
+          if (el == 'x') {
+            el = 5;
+          }
+          if (el == 'y') {
+            el = 2;
+          }
+          if (el == 'z') {
+            el = 1;
+          }
+          if (el == ' ') {
+            el = '0';
+          }
+
+          console.log(el);
+          displayEncryptCode.innerHTML += `<span>${el} </span>`;
+        }
+      }
+      //DecryptFunction
+      function codeDecrypt(e) {
+        e.preventDefault();
+        const msgDecrypt = document.getElementById('msgInputDecrypt').value;
+        const displayDecryptCode = document.getElementById(
+          'displayDecryptCode'
+        );
+        const msgDecryptArr = msgDecrypt.split(' ');
+
+        for (let el of msgDecryptArr) {
+          if (el == '26') {
+            el = 'a';
+          }
+          if (el == '25') {
+            el = 'b';
+          }
+          if (el == '22') {
+            el = 'c';
+          }
+          if (el == '21') {
+            el = 'd';
+          }
+          if (el == '24') {
+            el = 'e';
+          }
+          if (el == '23') {
+            el = 'f';
+          }
+          if (el == '20') {
+            el = 'g';
+          }
+          if (el == '19') {
+            el = 'h';
+          }
+          if (el == '16') {
+            el = 'i';
+          }
+          if (el == '15') {
+            el = 'j';
+          }
+          if (el == '18') {
+            el = 'j';
+          }
+          if (el == '17') {
+            el = 'l';
+          }
+          if (el == '14') {
+            el = 'm';
+          }
+          if (el == '13') {
+            el = 'n';
+          }
+          if (el == '10') {
+            el = 'o';
+          }
+          if (el == '9') {
+            el = 'p';
+          }
+          if (el == '12') {
+            el = 'q';
+          }
+          if (el == '11') {
+            el = 'r';
+          }
+          if (el == '8') {
+            el = 's';
+          }
+          if (el == '7') {
+            el = 't';
+          }
+          if (el == '4') {
+            el = 'u';
+          }
+          if (el == '3') {
+            el = 'v';
+          }
+          if (el == '6') {
+            el = 'w';
+          }
+          if (el == '5') {
+            el = 'x';
+          }
+          if (el == '2') {
+            el = 'y';
+          }
+          if (el == '1') {
+            el = 'z';
+          }
+          if (el == '0') {
+            el = ' ';
+          }
+          displayDecryptCode.innerHTML += `<span>${el}</span>`;
+        }
+      }
+      //events
+      //EncryptBtn
+      document
+        .getElementById('btnEncrypt')
+        .addEventListener('click', codeEncrypt);
+      //DecryptBtn
+      document
+        .getElementById('btnDecrypt')
+        .addEventListener('click', codeDecrypt);
+    </script>
+  </body>
+</html>
