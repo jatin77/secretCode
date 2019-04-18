@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #ece9e6, #ffffff);
+}
+
+/*Icon*/
+.head-image {
+  width: 80px;
+}
+
+/*Input Incrypt*/
+#msgInputEncrypt,
+#msgInputEncrypt::placeholder {
+  color: #d9534f;
+  font-family: 'Shadows Into Light', cursive;
+
+}
+
+/*Input Decrypt*/
+#msgInputDecrypt,
+#msgInputDecrypt::placeholder {
+  color: #428bca;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+/*display Encrypt Key*/
+#displayEncryptCode {
+  color: #d9534f;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+/*display Decrypt key*/
+#displayDecryptCode {
+  color: #428bca;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+/*button*/
+.btn {
+  font-family: 'Shadows Into Light', cursive !important;
+}
